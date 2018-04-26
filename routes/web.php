@@ -24,8 +24,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/calendars', 'ProductionController@index');
 
-
-
 Route::get('/calendar', 'ProductionController@calendar');
 Route::get('/create', 'ProductionController@create');
 Route::get('/{production}', 'ProductionController@show');
