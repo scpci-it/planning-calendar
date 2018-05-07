@@ -13,7 +13,7 @@
 	</style>
 	</body>
 
-		<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.1.0/fullcalendar.min.css' />
+	<link href="{{ asset('css/fullcalendar.css') }}" rel="stylesheet">
 
 <div class="container">	    
 	<div class="card-header bg-primary mt-3">
@@ -21,11 +21,14 @@
 	</div>
 </div>
 
+<div class="container">
+
 		@if($flash = session('message'))
 			<div class="alert alert-success mt-3" role="alert">
 				{{ $flash }}
 			</div>
 		@endif
+</div>
 
 		<div id='calendar' class ='container mt-3'></div>
 
@@ -33,9 +36,9 @@
 
 @section('scripts')
 
-	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-	<script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js'></script>
-	<script src='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.1.0/fullcalendar.min.js'></script>
+	<script src="{{ asset('js/jquery1.11.3.js') }}"></script>
+	<script src="{{ asset('js/moment.js') }}"></script>
+	<script src="{{ asset('js/fullcalendar.js') }}"></script>
 			
 	<script>
 	    $(document).ready(function() {
